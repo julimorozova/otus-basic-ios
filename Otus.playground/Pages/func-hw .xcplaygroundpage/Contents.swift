@@ -1,9 +1,22 @@
 
 //функция складывает две целочисленных переменных - отдает на выходе сумму
 
-func sum(num1: Int, num2: Int)-> Int {
+func sum(_ num1: Int, _ num2: Int)-> Int {
     return num1 + num2
 }
+func testSum() {
+    let result1 = sum(2, 5)
+    assert(result1 == 7, "ошибка: ожидалось 7, получили: \(result1) ")
+    
+    let result2 = sum(-1, 1)
+    assert(result2 == 0, "ошибка: ожидалось 0, получили: \(result2) ")
+    
+    let result3 = sum(0, 0)
+    assert(result3 == 0, "ошибка: ожидалось 0, получили: \(result3) ")
+    
+    print("✅ testSum passed!")
+}
+testSum()
 
 //функция принимает кортеж из числа и строки приводит число к строке и ввыводит в консоль резуультат
 func printInt(tuple: (String, Int)) {
